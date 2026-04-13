@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
     <!-- links to google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,7 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <script defer src="Navbar.js"></script>
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <title>Andrew's CV</title>
 </head>
 
@@ -29,11 +29,13 @@
     <div class="w-100 h-100 position-fixed z-0" style="backdrop-filter: blur(5px);"></div>
     <nav-bar></nav-bar>
     <div style="min-height: 50px; top: 0;"></div>
-    <main class="text-center z-1 d-flex justify-content-center align-items-center flex-column p-4">
-        <article class="d-flex flex-wrap gap-3 flex-column justify-content-center container" style="width: 700px;">
+    <main
+        class="d-flex flex-column h-100 text-center z-1 d-flex justify-content-center align-items-center flex-column p-4">
+        <article class="mb-3 d-flex flex-wrap gap-3 flex-column justify-content-center container" style="width: 700px;">
+            <!-- spacer -->
+            <div class="p-5"></div>
             <!-- Title Card -->
-            <section class="card p-3 container"
-                style="background-color: rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px);">
+            <section class="card p-3 container col-12 custom-bg">
                 <div class="row">
 
                     <div class="col order-sm-1">
@@ -52,50 +54,90 @@
                 </div>
             </section>
             <!-- Skills Card -->
-            <section class="card p-3" style="background-color: rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px);">
+            <section class="card p-3 container col-12 custom-bg">
                 <h3 class="card-title">
-                    <span class="bg-white px-3 pb-1 rounded-5">
+                    <span class="px-3 pb-1 rounded-5" style="background-color: var(--green1);">
                         <span class="material-symbols-outlined">stacks</span>
                         My Tech Stack</span>
                 </h3>
                 <div class="card-body d-flex gap-2 flex-wrap justify-content-center">
-                    <div class="skill-card rounded-3 p-2">
+                    <div class="skill-card rounded-3 p-2 col-7 col-sm-2">
                         <h3 class="fs-6">React</h3>
                         <img style="width: 50px" src="./images/React.svg" alt="">
                     </div>
-                    <div class="skill-card rounded-3 p-2">
+                    <div class="skill-card rounded-3 p-2 col-7 col-sm-2">
                         <h3 class="fs-6">JavaScript</h3>
                         <img style="width: 50px" src="./images/JavaScript.svg" alt="">
                     </div>
-                    <div class="skill-card rounded-3 p-2">
+                    <div class="skill-card rounded-3 p-2 col-7 col-sm-2">
                         <h3 class="fs-6">HTML</h3>
                         <img style="width: 50px" src="./images/HTML.svg" alt="">
                     </div>
-                    <div class="skill-card rounded-3 p-2">
+                    <div class="skill-card rounded-3 p-2 col-7 col-sm-2">
                         <h3 class="fs-6">CSS</h3>
                         <img style="width: 50px" src="./images/CSS.svg" alt="">
                     </div>
                 </div>
+                <!-- bars -->
+                <section class="d-flex flex-column align-items-center gap-2">
+                    <h3 class="w-100"><span class="px-3 pb-1 rounded-5 bg-white">Proficiency Levels</span></h3>
+                    <!-- React -->
+                    <div class="d-flex gap-3 w-100 justify-content-center align-items-center text-center">
+                        <p class="m-0">React: </p>
+                        <c-react-bar class="progress flex-grow-1" role="progressbar" aria-label="Success example"
+                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-success" style="width: 33%">33%</div>
+                        </c-react-bar>
+                        <p class="m-0">Still Learning</p>
+                    </div>
+                    <!-- Javascript -->
+                    <div class="d-flex gap-3 w-100 justify-content-center align-items-center text-center">
+                        <p class="m-0">JavaScript: </p>
+                        <c-react-bar class="progress flex-grow-1" role="progressbar" aria-label="Success example"
+                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-success" style="width: 100%">100%</div>
+                        </c-react-bar>
+                        <p class="m-0">Production Ready</p>
+                    </div>
+                    <!-- HTML -->
+                    <div class="d-flex gap-3 w-100 justify-content-center align-items-center text-center">
+                        <p class="m-0">HTML: </p>
+                        <c-react-bar class="progress flex-grow-1" role="progressbar" aria-label="Success example"
+                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-success" style="width: 100%">100%</div>
+                        </c-react-bar>
+                        <p class="m-0">Production Ready</p>
+                    </div>
+                    <!-- CSS -->
+                    <div class="d-flex gap-3 w-100 justify-content-center align-items-center text-center">
+                        <p class="m-0">CSS: </p>
+                        <c-react-bar class="progress flex-grow-1" role="progressbar" aria-label="Success example"
+                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-success" style="width: 100%">100%</div>
+                        </c-react-bar>
+                        <p class="m-0">Production Ready</p>
+                    </div>
+                </section>
             </section>
             <!-- Bio -->
-            <section class="card p-3" style="background-color: rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px);">
+            <section class="card p-3 container col-12 custom-bg">
                 <h3 class="card-title">
-                    <span class="card-title m-0 bg-white px-3 pb-1 rounded-5">
+                    <span class="card-title m-0 px-3 pb-1 rounded-5" style="background-color: var(--green1);">
                         <span class="material-symbols-outlined">menu_book</span>
                         About Me</span>
                 </h3>
                 <div class="card-body">
                     <span class="bg-white px-2 rounded">Im a CS student at Binghamton University.</span><br>
-                    <span class="bg-white px-2 rounded">Coding has been a hobby of mine, for the past three
+                    <span class="bg-white px-2 rounded">Coding has been a hobby of mine for the past three
                         years.</span><br>
                     <span class="bg-white px-2 rounded">Currently I am studying to become a software engineer</span>
                 </div>
             </section>
 
-            <a class="col-12 text-decoration-none" href="#top"><span class="bg-white px-3 pb-1 rounded-5 ">Return to
-                    top</span></a>
         </article>
-
+        <div class="d-flex flex-grow-1"></div>
+        <a class="col-12 text-decoration-none" href="#top"><span class="bg-white px-3 pb-1 rounded-5 ">Return to
+                top</span></a>
     </main>
 </body>
 
